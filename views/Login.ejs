@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Velocity Classes</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> Recommended
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f87a898598.js" crossorigin="anonymous"></script>
+    <style>
+
+        #form-area {
+            width: 100%;
+            /* height: 100vh; */
+            display: flex;
+            align-items: center;
+        }
+
+        #form-container {
+            width: 60%;
+            height: calc(100% - 60px);
+            /* background-color: red; */
+            padding: 40px;
+        }
+
+        #form-title h1 {
+            font-size: 3vw;
+            color: var(--text-color);
+            font-weight: 400;
+            letter-spacing: -2px;
+        }
+
+        #form-title h3 {
+            font-size: 1.7vw;
+            color: var(--text-color);
+            font-weight: 400;
+            letter-spacing: -1px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0px;
+        }
+        form h3{
+            color: var(--text-color);
+            font-size: 1.5vw;
+            font-weight: 600;
+            letter-spacing: -1px;
+            position: relative;
+            top: 10px;
+            left: 18%;
+        }
+        form input {
+            position: relative;
+            width: 45%;
+            padding: 28px 25px;
+            background-color: #3333336c;
+            border: 1px solid var(--secondary-color);
+            border-radius: 20px;
+            font-size: 1.6vw;
+            color: var(--text-color);
+            outline: none;
+        }
+
+        form label {
+            position: relative;
+            top: 30px;
+            left: 25px;
+            color: white;
+            font-size: .8vw;
+        }
+
+        form .number {
+            width: 45%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: fit-content;
+            margin-top: 10px;
+            margin-bottom: -7px;
+        }
+
+        form .number input#code {
+            width: 25%;
+            padding: 25px 10px;
+        }
+
+        form .number input#phone {
+            width: 70%;
+        }
+
+        .sub-btn {
+            width: 12%;
+            margin: 50px 0px;
+            color: var(--text-color);
+            font-size: 1.2vw;
+
+
+        }
+
+        .sub-btn {
+            display: inline-flex;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: none;
+            border: 2px solid var(--secondary-color);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: ease-in-out;
+        }
+
+        .sub-btn::before {
+            content: "";
+            position: absolute;
+            top: var(--y);
+            left: var(--x);
+            width: 0px;
+            height: 0px;
+            border-radius: 50%;
+            background-color: #fab800;
+            transition: width 0.5s, height 0.5s;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .sub-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .sub-btn:hover {
+            transform: scale(1.1);
+            color: white;
+        }
+
+        #form-img {
+            width: 40%;
+            /* height: 100vh; */
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: right;
+        }
+
+        #form-img img {
+            width: 80%;
+            height: 100%;
+            object-fit: cover;
+            position: sticky;
+            top: 0;
+            right: 0;
+        }
+                .form-change{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .form-change h2{
+            color: var(--text-color);
+            font-size: 2.5vw;
+            font-weight: 600;
+            margin: 10px 0px;
+        }
+        .form-change .btn a{
+            color: var(--text-color);
+        }
+    </style>
+
+</head>
+
+<body>
+    <main>
+        <header id="header">
+            <div id="logo-area">
+                <a href="/">Velocity Classes</a>
+            </div>
+            <div id="nav-btns">
+                <div id="points-container-nav">
+                    <img src="/images/points.png" alt="points">
+                    <div id="points">1000</div>
+
+                </div>
+                <div id="menu">
+                    <button id="show-nav"><img src="/images/Menu.png" alt=""></button>
+                </div>
+            </div>
+        </header>
+        <nav id="navigation">
+            <div id="top-nav">
+                <button id="close-btn"><img src="/images/Close.png" alt=""></button>
+            </div>
+            <div id="center-nav">
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/quiz">Quiz</a></li>
+                    <li><a href="/sign-up">Sign-up</a></li>
+                    <li><a href="/leaderboard">Leaderboard</a></li>
+                </ul>
+            </div>
+            <div id="bottom-nav">
+                <h2>Our Socials</h2>
+                <ul>
+                    <li><a href="#" class="hover">Instagram</a></li>
+                    <li><a href="#" class="hover">Facebook</a></li>
+                    <li><a href="#" class="hover">X</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <div id="form-area">
+            <div id="form-container">
+                <div id="form-title">
+                    <h1>Back to the Sphere</h1>
+                    <h3>Of Digital Education</h3>
+                </div>
+                <form action="/sign-up" method="post">
+                    <div class="number">
+                        <input type="text" name="code" id="code" placeholder="+91">
+                        <input type="text" name="phone" id="phone" placeholder="E.g. 8109531241">
+                    </div>
+                    <h3>OR</h3>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Your Email">
+                    <h3>OR</h3>
+                    <label for="offline-id">Offline ID</label>
+                    <input type="text" name="offline-id" id="offline-id" placeholder="Enter Your Offline-ID">
+                    <label for="password">Pasword</label>
+                    <input type="password" name="password" id="password" placeholder="Enter a Strong Password" required>
+                    <button type="submit" class="sub-btn">Send</button>
+                </form>
+
+            </div>
+            <div id="form-img">
+                <img src="/images/Login.jpg" alt="">
+            </div>
+        </div>
+        <div class="form-change">
+            <h2>New Here?</h2>
+            <button class="btn"><a href="/sign-up">Sign-up</a></button>
+        </div>
+        <footer>
+            <div id="footer-top">
+                <div id="f-t-l">
+                    <h1>Bhind
+                        Madhya Pradesh India.</h1>
+                </div>
+                <div id="f-t-r">
+                    <ul>
+                        <li><i class="fa-solid fa-phone-volume"></i><a href="#">+91 8109531241</a></li>
+                        <li><i class="fa-solid fa-phone-volume"></i><a href="#">+91 8435308360</a></li>
+                        <li><i class="fa-solid fa-envelope"></i><a href="#">info@velocityclasses.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer-bet">
+                <div id="f-b-l">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+                <div id="f-b-r">
+                    <h3>Powered by <a href="https://astacode.us.to/" target="_blank">AstaCode India</a></h3>
+                </div>
+            </div>
+            <div id="footer-down">
+                <h1>#Velocity Classes</h1>
+            </div>
+        </footer>
+    </main>
+
+
+    <script src="https://unpkg.com/lenis@1.1.1/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+    <script src="/javascripts/main.js"></script>
+    <script>
+        Shery.imageEffect("#form-img img", {
+            style: 1, //Select Style
+            // debug: true, // Debug Panel
+            config: { "a": { "value": 0.69, "range": [0, 30] }, "b": { "value": -0.95, "range": [-1, 1] }, "zindex": { "value": -9996999, "range": [-9999999, 9999999] }, "aspect": { "value": 0.5625045419500332 }, "ignoreShapeAspect": { "value": true }, "shapePosition": { "value": { "x": 0, "y": 0 } }, "shapeScale": { "value": { "x": 0.5, "y": 0.5 } }, "shapeEdgeSoftness": { "value": 0, "range": [0, 0.5] }, "shapeRadius": { "value": 0, "range": [0, 2] }, "currentScroll": { "value": 0 }, "scrollLerp": { "value": 0.07 }, "gooey": { "value": false }, "infiniteGooey": { "value": false }, "growSize": { "value": 4, "range": [1, 15] }, "durationOut": { "value": 1, "range": [0.1, 5] }, "durationIn": { "value": 1.5, "range": [0.1, 5] }, "displaceAmount": { "value": 0.5 }, "masker": { "value": false }, "maskVal": { "value": 1, "range": [1, 5] }, "scrollType": { "value": 0 }, "geoVertex": { "range": [1, 64], "value": 1 }, "noEffectGooey": { "value": true }, "onMouse": { "value": 0 }, "noise_speed": { "value": 0.2, "range": [0, 10] }, "metaball": { "value": 0.2, "range": [0, 2] }, "discard_threshold": { "value": 0.5, "range": [0, 1] }, "antialias_threshold": { "value": 0.002, "range": [0, 0.1] }, "noise_height": { "value": 0.5, "range": [0, 2] }, "noise_scale": { "value": 10, "range": [0, 100] } }
+        });
+    </script>
+</body>
+
+</html>

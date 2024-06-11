@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Velocity Classes</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/f87a898598.js" crossorigin="anonymous"></script>
+    <style>
+        #about-hero {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #about-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 25px;
+            /* background-color: red; */
+            /* width: 100%; */
+            white-space: nowrap;
+        }
+
+        #about-text h1 {
+            font-size: 10vw;
+            color: black;
+            text-stroke: 2px white;
+            -webkit-text-stroke: 2px white;
+        }
+
+        #journey {
+            width: 100%;
+            height: calc(100vh - 240px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #jour-left {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            align-items: end;
+            padding: 70px 50px;
+        }
+
+        #jour-title {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        #jour-title h2 {
+            color: var(--text-color);
+            font-size: 5vw;
+            line-height: 1;
+        }
+
+        #jour-right {
+            width: 60%;
+            display: flex;
+            align-self: end;
+            padding: 60px;
+        }
+
+        #jour-right-text {
+            width: 100%;
+            display: inline-block;
+            /* background-color: red; */
+            overflow: hidden;
+        }
+
+        #jour-right-text p {
+            font-size: 1.5vw;
+            color: var(--text-color);
+        }
+
+        #purpose {
+            width: 100%;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #purpose-left {
+            width: 60%;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            padding: 70px;
+        }
+
+        #purpose-left-text {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        #purpose-left-text p {
+            font-size: 1.5vw;
+            color: var(--text-color);
+        }
+
+        #purpose-right {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            align-items: end;
+            justify-content: right;
+            padding: 80px 60px;
+        }
+
+        #purpose-title {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        #purpose-title h2 {
+            color: var(--text-color);
+            font-size: 5vw;
+            line-height: 1;
+        }
+
+        #team {
+            width: 100%;
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 60px;
+        }
+
+        #team-left {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            align-items: end;
+        }
+
+        #team-title {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        #team-title h2 {
+            color: var(--text-color);
+            font-size: 5vw;
+            line-height: 1;
+        }
+
+        #team-right {
+            width: 60%;
+            height: 100%;
+            display: flex;
+            align-items: end;
+            padding: 40px;
+        }
+
+        #team-right-text {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        #team-right-text p {
+            font-size: 1.5vw;
+            color: var(--text-color);
+        }
+
+        #qoute-img {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        #moving-img {
+            width: 55%;
+            height: 60%;
+            overflow: hidden;
+            position: relative;
+            border-radius: 30px;
+        }
+
+        #moving-img img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        #quote {
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        #qoute h2 {
+            /* color: var(--text-color); */
+            text-stroke: 2px var(--secondary-color);
+            -webkit-text-stroke: 2px var(--secondary-color);
+            font-size: 3vw;
+            line-height: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header id="header">
+            <div id="logo-area">
+                <a href="/">Velocity Classes</a>
+            </div>
+            <div id="nav-btns">
+                <div id="points-container-nav">
+                    <img src="/images/points.png" alt="points">
+                    <div id="points">1000</div>
+
+                </div>
+                <div id="menu">
+                    <button id="show-nav"><img src="/images/Menu.png" alt=""></button>
+                </div>
+            </div>
+        </header>
+        <nav id="navigation">
+            <div id="top-nav">
+                <button id="close-btn"><img src="/images/Close.png" alt=""></button>
+            </div>
+            <div id="center-nav">
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/quiz">Quiz</a></li>
+                    <li><a href="/sign-up">Sign-up</a></li>
+                    <li><a href="/leaderboard">Leaderboard</a></li>
+                </ul>
+            </div>
+            <div id="bottom-nav">
+                <h2>Our Socials</h2>
+                <ul>
+                    <li><a href="#" class="hover">Instagram</a></li>
+                    <li><a href="#" class="hover">Facebook</a></li>
+                    <li><a href="#" class="hover">X</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <section id="about-hero">
+            <div id="about-text">
+                <h1>About Velocity Classes</h1>
+                <h1>About Velocity Classes</h1>
+                <h1>About Velocity Classes</h1>
+            </div>
+        </section>
+        <section id="journey">
+            <div id="jour-left" class="animated-text">
+                <div id="jour-title">
+                    <h2>Our</h2>
+                    <h2>Journey</h2>
+                </div>
+            </div>
+            <div id="jour-right">
+                <div id="jour-right-text" class="animated-para">
+                    <p>At Velocity Classes, we have been on a remarkable journey since our inception.
+                        Our passion for education and dedication to helping students reach their full potential has us
+                        every step of the way.
+                        Over the years, we helped countless students achieve academic success and realize their dreams.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="purpose">
+            <div id="purpose-left">
+                <div id="purpose-left-text" class="animated-para">
+                    <p>Our primary goal at Velocity Classes is to provide top-notch coaching and guidance to students
+                        seeking academic
+                        excellence. We aim to equip our students with the knowledge, skills, and confidence they to
+                        excel in their studies and
+                        beyond. Our purpose is to inspire and empower students to reach new heights and achieve their
+                        goals.
+                    </p>
+                </div>
+            </div>
+            <div id="purpose-right">
+                <div id="purpose-title"  class="animated-text">
+                    <h2>Purpose
+                    </h2>
+                    <h2>and Goals</h2>
+                </div>
+
+
+            </div>
+        </section>
+        <section id="team">
+            <div id="team-left">
+                <div id="team-title"  class="animated-text">
+                    <h2>Introduction
+                    </h2>
+                    <h2>to the Team</h2>
+                </div>
+            </div>
+            <div id="team-right">
+                <div id="team-right-text" class="animated-para">
+                    <p>Our team at Velocity Classes consists of experienced educators and experts in their respective
+                        fields. With a wealth of
+                        knowledge and a passion for teaching, our team is dedicated to guiding and supporting students
+                        every step of the way. We
+                        strive to create a nurturing and engaging learning environment where students can thrive and
+                        succeed.</p>
+                </div>
+            </div>
+
+        </section>
+        <section id="faculty">
+            <div id="faculty-container">
+                <div class="faculty-card">
+                    <div class="name">
+                        <h2>Er. D.S.C</h2>
+                    </div>
+                    <div class="img"></div>
+                    <div class="role">
+                        <h2>Math Coach</h2>
+                    </div>
+                </div>
+                <div class="faculty-card">
+                    <div class="name">
+                        <h2>Er. S.S. Kushwah</h2>
+                    </div>
+                    <div class="img"></div>
+                    <div class="role">
+                        <h2>Science Coach</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="qoute-img">
+            <div id="moving-img">
+                <img src="/images/About-3.jpg" alt="">
+                <img src="/images/About-1.jpg" alt="">
+                <img src="/images/About-2.jpg" alt="">
+                <img src="/images/About-4.jpg" alt="">
+            </div>
+            <div id="qoute" class="animated-text">
+                <h2>“I touch the future. I teach.” – Christa McAuliffe</h2>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <footer>
+            <div id="footer-top">
+                <div id="f-t-l">
+                    <h1>Bhind
+                        Madhya Pradesh India.</h1>
+                </div>
+                <div id="f-t-r">
+                    <ul>
+                        <li><i class="fa-solid fa-phone-volume"></i><a href="#">+91 8109531241</a></li>
+                        <li><i class="fa-solid fa-phone-volume"></i><a href="#">+91 8435308360</a></li>
+                        <li><i class="fa-solid fa-envelope"></i><a href="#">info@velocityclasses.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="footer-bet">
+                <div id="f-b-l">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+                <div id="f-b-r">
+                    <h3>Powered by <a href="https://astacode.us.to/" target="_blank">AstaCode India</a></h3>
+                </div>
+            </div>
+            <div id="footer-down">
+                <h1>#Velocity Classes</h1>
+            </div>
+        </footer>
+    </main>
+
+
+    <script src="https://unpkg.com/lenis@1.1.1/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+
+
+    <script src="/javascripts/main.js"></script>
+    <script>
+        gsap.to('#about-text h1', {
+            x: "-100%",
+            duration: 8,
+            repeat: "2"
+        })
+        Shery.imageEffect("#moving-img", {
+            style: 3,
+            // debug: true,
+            gooey: true,
+            config: { "uFrequencyX": { "value": 12, "range": [0, 100] }, "uFrequencyY": { "value": 11.45, "range": [0, 100] }, "uFrequencyZ": { "value": 4.58, "range": [0, 100] }, "geoVertex": { "range": [1, 64], "value": 5.33 }, "zindex": { "value": -9996999, "range": [-9999999, 9999999] }, "aspect": { "value": 1.8941878842910884 }, "ignoreShapeAspect": { "value": true }, "shapePosition": { "value": { "x": 0, "y": 0 } }, "shapeScale": { "value": { "x": 0.5, "y": 0.5 } }, "shapeEdgeSoftness": { "value": 0, "range": [0, 0.5] }, "shapeRadius": { "value": 0, "range": [0, 2] }, "currentScroll": { "value": 0 }, "scrollLerp": { "value": 0.07 }, "gooey": { "value": true }, "infiniteGooey": { "value": true }, "growSize": { "value": 4, "range": [1, 15] }, "durationOut": { "value": 1, "range": [0.1, 5] }, "durationIn": { "value": 1.5, "range": [0.1, 5] }, "displaceAmount": { "value": 0.5 }, "masker": { "value": true }, "maskVal": { "value": 1.06, "range": [1, 5] }, "scrollType": { "value": 0 }, "noEffectGooey": { "value": true }, "onMouse": { "value": 0 }, "noise_speed": { "value": 0.2, "range": [0, 10] }, "metaball": { "value": 0.2, "range": [0, 2], "_gsap": { "id": 24 } }, "discard_threshold": { "value": 0.63, "range": [0, 1] }, "antialias_threshold": { "value": 0, "range": [0, 0.1] }, "noise_height": { "value": 0.5, "range": [0, 2] }, "noise_scale": { "value": 19.85, "range": [0, 100] } }
+        });
+        SplitType.create('.animated-text h2')
+        gsap.from('.animated-text h2 .word .char', {
+            y: 150,
+            duration: .5,
+            stagger: .1,
+            scrollTrigger: {
+                trigger: '.animated-text',
+                start: 'top 80%',
+                end: "top 80%",
+            }
+        })
+        SplitType.create('.animated-para p')
+        gsap.from('.animated-para p .word', {
+            y: 200,
+            duration: .5,
+            stagger: .1,
+            scrollTrigger: {
+                trigger: '.animated-para',
+                start: 'top 80%',
+                end: "top 80%",
+            }
+        })
+    </script>
+</body>
+
+</html>
